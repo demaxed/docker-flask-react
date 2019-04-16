@@ -1,7 +1,7 @@
 {
   "name": "easyHelloWorld",
   "version": "0.0.1",
-  "description": "This is an app demo",
+  "description": "This is an app demo from Habr article.",
   "main": "index.js",
   "scripts": {
     "build": "echo 'build'",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/demaxed/docker-flask-react.git"
   },
-  "author": "Max Demy <demyanenkomaxim22@gmail.com>",
+  "author": "Maxim-Demy <demyanenkomaxim22@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/demaxed/docker-flask-react/issues"
@@ -22,4 +22,3 @@
     "express": "^4.16.3"
   }
 }
-
