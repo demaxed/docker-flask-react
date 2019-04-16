@@ -1,3 +1,5 @@
+# docker/frontend/Dockerfile
+
 FROM node:carbon
 
 WORKDIR /app
@@ -9,7 +11,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 ADD frontend /app/src
 WORKDIR /app/src
 RUN npm run build
-RUN npm run start
+CMD npm run start
 #docker-compose exec frontend npm install --save newDependency отрабатывает как надо
 # и модифицирует package.json в нашем репозитории
 #(что было бы не так, если бы мы использовали COPY, как многие предлагают).
