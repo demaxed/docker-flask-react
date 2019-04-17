@@ -32,7 +32,20 @@ Wiki-engine. Карточки оформлены в Markdown. SPA with server-si
 
 ### Backend
 
-flask, flask-cors, gevent, gunicorn
+flask, flask-cors, gevent, gunicorn  
+
+$docker-compose up backend
 
 ### Frontend. Express
+
+$docker-compose up frontend
+
+### Frontend. Webpack and React.
+
+- webpack
+- babel: compiler  
+
+docker-compose up --build frontend
+
+### MongoDB
 
