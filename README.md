@@ -63,3 +63,7 @@ Redux is JS library for managing app state.
 ### Add card to frontend
 
 Redux Architecture.  
+
+### Worker: RQ(Redis Queue)
+
+
