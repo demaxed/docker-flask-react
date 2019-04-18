@@ -1,6 +1,15 @@
 # Web "Hello, world!" in 2019
 ## Python(Flask), React, Docker  
 
+### Run App
+
+
+    docker-compose up
+    docker-compose exec backend python -m tools.add_test_content
+
+
+http://localhost:40002/card/helloworld  
+
 https://habr.com/ru/post/444446/
 
 ![alt-текст](https://habrastorage.org/webt/ul/ne/9v/ulne9vljujdrtxnf-qeqrrux7da.png)
