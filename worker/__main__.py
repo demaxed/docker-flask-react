@@ -34,7 +34,7 @@ class JobWithWiring(Job):
 
 with rq.Connection(wiring.redis):
     w = rq.Worker(
-        queue=[wiring.settings.TASK_QUEUE_NAME],
+        queues=[wiring.settings.TASK_QUEUE_NAME],
         name=uuid.uuid4().hex,
         job_class=JobWithWiring
     )
