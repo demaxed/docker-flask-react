@@ -5,7 +5,6 @@ https://habr.com/ru/post/444446/
 
 ![alt-текст](https://habrastorage.org/webt/ul/ne/9v/ulne9vljujdrtxnf-qeqrrux7da.png)
 
-Что мы покроем:
 
 - настройка dev-окружения в docker-compose.
 - создание бэкенда на Flask.
@@ -18,10 +17,10 @@ https://habr.com/ru/post/444446/
 
 Wiki-engine. Карточки оформлены в Markdown. SPA with server-side rendering.  
 
-- Клиент. Сделаем одностраничное приложение (т.е. с переходами между страницами посредством AJAX) на весьма распространённой в мире фронтенда связке React+Redux.
-- Фронтенд. Сделаем простенький сервер на Express, который будет рендерить наше React-приложение (запрашивая все необходимые данные в бэкенде асинхронно) и выдавать пользователю.
-- Бэкенд. Повелитель бизнес-логики, наш бэкенд будет небольшим Flask-приложением. Данные (наши карточки) будем хранить в популярном документном хранилище MongoDB, а для очереди задач и, возможно, в будущем — кэширования будем использовать Redis.
-- Воркер. Отдельный контейнер для тяжёлых задач у нас будет запускаться библиотечкой RQ.  
+- Клиент. Одностраничное приложение (т.е. с переходами между страницами посредством AJAX) на весьма распространённой в мире фронтенда связке React+Redux.
+- Фронтенд. Сервер на Express, который будет рендерить React-приложение (запрашивая все необходимые данные в бэкенде асинхронно) и выдавать пользователю.
+- Бэкенд. Flask-приложением. Данные (наши карточки) будем хранить в популярном документном хранилище MongoDB, а для очереди задач и, возможно, в будущем — кэширования будем использовать Redis.
+- Воркер. Отдельный контейнер для тяжёлых задач будет запускаться библиотечкой RQ.  
 
 ### Инфраструктура: docker-compose
 
@@ -49,4 +48,14 @@ docker-compose up --build frontend
 
 ### MongoDB
 
-using Data Access Object
+using Data Access Object(DAO) instead of ORM.  
+
+Add tools.
+
+docker-compose up --build backend  
+
+### Redux
+
+Make route that open React app with API and show cards.  
+Server should return rendered HTML but app should navigation by JSON from API. And SPA. Damn.  
+Redux is JS library for managing app state.

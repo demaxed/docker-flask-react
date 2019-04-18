@@ -1,6 +1,5 @@
 import os
 
-
 from pymongo import MongoClient
 from pymongo.database import Database
 
@@ -20,7 +19,10 @@ class Wiring(object):
 
         self.mongo_client: MongoClient = MongoClient(
             host=self.settings.MONGO_HOST,
-            port=self.settings.MONGO_PORT)
-        self.mongo_database: Database = self.mongo_client[self.settings.MONGO_DATABASE]
+            port=self.settings.MONGO_PORT
+        )
+
+        self.mongo_database: Database = \
+            self.mongo_client[self.settings.MONGO_DATABASE]
+
         self.card_dao: CardDAO = MongoCardDAO(self.mongo_database)
-        
