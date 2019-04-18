@@ -59,3 +59,7 @@ docker-compose up --build backend
 Make route that open React app with API and show cards.  
 Server should return rendered HTML but app should navigation by JSON from API. And SPA. Damn.  
 Redux is JS library for managing app state.
+
+### Add card to frontend
+
+Redux Architecture.  
